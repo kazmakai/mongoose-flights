@@ -7,14 +7,14 @@ const Schema = mongoose.Schema;
 const flightSchema = new Schema({
     airline: {
         type: String,
-        enum: ['American', 'Singapore', 'JAL', 'Etihad']
+        enum: ['Qatar Airways', 'Singapore Airlines', 'Emirates', 'Air Asia', 'Etihad Airways']
     },
     airport: {
         type: String,
-        enum: ['AUS', 'DFW', 'DEN', 'NRT', 'HND'],
+        enum: ['DEN', 'JFK', 'SIN', 'NRT', 'HND'],
         default: 'DEN'
     },
-    flightNo: {
+    flightNumber: {
         type: Number,
         required: true,
         min: 10,
@@ -22,7 +22,7 @@ const flightSchema = new Schema({
     },
     departs: {
         type: Date,
-        dafault: () => {
+        default: () => {
             const date = new Date();
             date.setFullYear(date.getFullYear() + 1)
             return date;

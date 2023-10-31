@@ -4,39 +4,38 @@
     <label>Airline:
         <select name="airline">
             <option value="" selected disabled>Choose an Airline</option>
-            <option value="qatar-airways">Qatar Airways</option>
-            <option value="singapore-airlines">Singapore Airlines</option>
-            <option value="emirates">Emirates</option>
-            <option value="all-nippon-airways">All Nippn Airways</option>
-            <option value="etihad-airways">Etihad Airways</option>
+            <option value="Qatar Airways">Qatar Airways</option>
+            <option value="Singapore Airlines">Singapore Airlines</option>
+            <option value="Emirates">Emirates</option>
+            <option value="Air Asia">Air Asia</option>
+            <option value="Etihad Airways">Etihad Airways</option>
         </select>
     </label>
 
-    <label>Airports:
-        <select name="airports">
+    <label>Airport:
+        <select name="airport">
             <option value="DEN" selected>DEN</option>
             <option value="JFK">JFK</option>
             <option value="SIN">SIN</option>
             <option value="NRT">NRT</option>
-            <option value="000">OOO</option>
+            <option value="HND">HND</option>
         </select>
     </label>
 
     <label>Flight Number:
-        <input name="flight-number" type="number" required>
+        <input name="flightNumber" type="number" required>
     </label>
 
     <label>Departure Date:
         <input 
             type="datetime-local"
             name="departs"
-            id="departs"
             value="<%= departsDate %>" 
             required
             >
     </label>
 
-    <input type="submit" value="Add Flight">
+    <button type="submit">Add Flight</button>
 
 </form>
 
