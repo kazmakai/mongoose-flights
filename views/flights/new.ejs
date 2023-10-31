@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/flights" method="post">
+    <label>Airline:
+        <select name="airline">
+            <option value="" selected disabled>Choose an Airline</option>
+            <option value="qatar-airways">Qatar Airways</option>
+            <option value="singapore-airlines">Singapore Airlines</option>
+            <option value="emirates">Emirates</option>
+            <option value="all-nippon-airways">All Nippn Airways</option>
+            <option value="etihad-airways">Etihad Airways</option>
+        </select>
+    </label>
+
+    <label>Airports:
+        <select name="airports">
+            <option value="DEN" selected>DEN</option>
+            <option value="JFK">JFK</option>
+            <option value="SIN">SIN</option>
+            <option value="NRT">NRT</option>
+            <option value="000">OOO</option>
+        </select>
+    </label>
+
+    <label>Flight Number:
+        <input name="flight-number" type="number" required>
+    </label>
+
+    <label>Departure Date:
+        <input 
+            type="datetime-local"
+            name="departs"
+            id="departs"
+            value="<%= departsDate %>" 
+            required
+            >
+    </label>
+
+    <input type="submit" value="Add Flight">
+
+</form>
+
+<%- include('../partials/footer') %>
